@@ -171,7 +171,7 @@ export default function Page() {
               YOUR DATA
             </div>
 
-            <div className="relative flex-1 min-w-[28px] h-px border-t-[1.5px] border-dashed border-rule">
+            <div className="relative flex-1 min-w-7 h-px border-t-[1.5px] border-dashed border-rule">
               <div className="slide absolute -top-2 left-0">
                 <Lock size={16} className="text-stamp" />
               </div>
