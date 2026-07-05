@@ -4,7 +4,7 @@ export default function Map() {
   return (
     <section className="relative w-full font-montserrat">
       <div className="relative w-full h-80 sm:h-100 md:h-120 lg:h-130 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent z-10 pointer-events-none" />
 
         <iframe
           title={`${MAP_CONFIG.name} location map`}
