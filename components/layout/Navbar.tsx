@@ -3,14 +3,9 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Logo from "@/public/images/logo.png";
-
-const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Menu", href: "#menu" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-] as const;
+import { NAV_LINKS } from "@/data/nav-links";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,6 +13,8 @@ export default function NavBar() {
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
 
+  const pathname = usePathname();
+  const isNavBrandBlack = pathname === "/";
   const handleScroll = useCallback(() => {
     setScrolled(window.scrollY > 100);
   }, []);
@@ -61,11 +58,12 @@ export default function NavBar() {
   }, [mobileMenuOpen]);
 
   const showBackground = scrolled && !mobileMenuOpen;
+  const isBrandWhite = isNavBrandBlack || showBackground || mobileMenuOpen;
 
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 z-50 flex w-full items-center justify-between px-10 py-5 transition-colors duration-300 ${
+        className={`fixed top-0 left-0 z-50 flex w-full items-center justify-between px-4 sm:px-6 md:px-10 py-4 sm:py-5 transition-colors duration-300 ${
           showBackground ? "bg-black/50 backdrop-blur-sm" : "bg-transparent"
         }`}
       >
@@ -76,21 +74,20 @@ export default function NavBar() {
             width={0}
             height={0}
             sizes="100vw"
-            className="h-10 w-auto object-contain"
+            className="h-8 sm:h-9 md:h-10 w-auto object-contain"
           />
         </div>
 
         <span
           aria-hidden="true"
-          className="pointer-events-none text-cream absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-2xl font-semibold font-(family-name:--font-dancing-script)"
-          // className="pointer-events-none text-cream absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-sm font-montserrat"
+          className={`pointer-events-none ${isBrandWhite ? "text-cream" : "text-stone-900"} absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-base sm:text-xl md:text-2xl font-semibold font-(family-name:--font-dancing-script)`}
         >
           Sahwa Coffee
         </span>
 
         <button
           ref={toggleRef}
-          className="z-50 cursor-pointer p-2 text-cream"
+          className={`z-50 cursor-pointer p-2 ${isBrandWhite ? "text-cream" : "text-stone-900"}`}
           onClick={() => setMobileMenuOpen((prev) => !prev)}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileMenuOpen}
@@ -99,7 +96,7 @@ export default function NavBar() {
           <div className="flex h-5 w-8 flex-col justify-between">
             <span
               className={`block h-0.5 w-full origin-center rounded-full bg-current transition-all duration-300 ${
-                mobileMenuOpen ? "translate-y-2.25 rotate-45" : ""
+                mobileMenuOpen ? "translate-y-[9px] rotate-45" : ""
               }`}
             />
             <span
@@ -109,7 +106,7 @@ export default function NavBar() {
             />
             <span
               className={`block h-0.5 w-full origin-center rounded-full bg-current transition-all duration-300 ${
-                mobileMenuOpen ? "-translate-y-2.25 -rotate-45" : ""
+                mobileMenuOpen ? "-translate-y-[9px] -rotate-45" : ""
               }`}
             />
           </div>
