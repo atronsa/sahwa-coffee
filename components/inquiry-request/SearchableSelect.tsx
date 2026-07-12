@@ -94,7 +94,7 @@ export default function SearchableSelect({
                   {selected === option && (
                     <Check className="w-3.5 h-3.5 shrink-0" />
                   )}
-                  <span className={selected === option ? "" : "ml-[22px]"}>
+                  <span className={selected === option ? "" : "ml-5.5"}>
                     {option}
                   </span>
                 </button>
