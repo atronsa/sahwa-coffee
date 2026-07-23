@@ -3,14 +3,14 @@ import Image from "next/image";
 export default function Contact() {
   return (
     <section className="w-full bg-cream font-montserrat">
-      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 max-w-9xl px-8 sm:px-10 md:px-12 lg:px-14 xl:px-20 py-10 sm:py-14 md:py-16 lg:py-20 gap-8 lg:gap-12">
-        <div className="flex flex-col justify-center gap-8 lg:pr-4 xl:pr-10">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 max-w-9xl px-6 sm:px-10 md:px-10 lg:px-14 xl:px-20 py-12 sm:py-16 md:py-20 gap-8 lg:gap-12">
+        <div className="flex flex-col justify-center gap-6 sm:gap-8 lg:pr-4 xl:pr-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 leading-tight text-center md:text-left">
             Get In Touch.
           </h2>
 
           {/* Description */}
-          <div className="flex flex-col gap-5 text-xs sm:text-sm font-light leading-relaxed text-black">
+          <div className="flex flex-col gap-4 sm:gap-5 text-[13px] sm:text-sm font-light leading-6 text-black">
             <p>
               Whether you're an importer, roaster, or distributor we'd love to
               hear from you. Tell us what you're looking for and we'll get back
@@ -26,7 +26,7 @@ export default function Contact() {
           {/* CTA */}
           <a
             href="/contact"
-            className="group relative inline-flex w-fit items-center gap-3 overflow-hidden border border-stone-900 px-8 py-4 mx-auto md:mx-0 text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-900 transition-all duration-500 hover:bg-stone-900 hover:text-cream focus:outline-none"
+            className="group relative inline-flex w-fit items-center gap-3 overflow-hidden border border-stone-900 px-8 py-4 mx-auto md:mx-0 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.2em] text-stone-900 transition-all duration-500 hover:bg-stone-900 hover:text-cream focus:outline-none"
           >
             <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/10 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
             Send Us a Message
