@@ -3,7 +3,7 @@ import { VALUES } from "@/data/about-values";
 export default function ValuesGrid() {
   return (
     <section className="relative bg-white font-montserrat">
-      <div className="max-w-7xl mx-auto px-8 sm:px-10 md:px-12 lg:px-14 xl:px-20 py-16 sm:py-20 md:py-20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-12 lg:px-14 xl:px-20 py-12 sm:py-16 md:py-20">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-stone-900">
             Our Guiding Principles
@@ -17,25 +17,24 @@ export default function ValuesGrid() {
             return (
               <div
                 key={card.id}
-                className="group relative bg-cream rounded-xl p-6 sm:p-8 border border-amber-100/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="group relative bg-cream rounded-lg p-6 sm:p-8 border border-amber-100/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                {/* Icon and label side by side */}
                 <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-5">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-100/40 flex items-center justify-center group-hover:bg-amber-100 transition-colors shrink-0">
                     <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-amber-700" />
                   </div>
-                  <h3 className="text-base sm:text-lg md:text-xl lg-text-xl font-semibold text-stone-900">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-stone-900">
                     {card.label}
                   </h3>
                 </div>
 
                 {card.content && (
-                  <p className="text-xs sm:text-sm text-black leading-6 md:leading-7">
+                  <p className="text-[13px] sm:text-sm text-black leading-6 sm:leading-7">
                     {card.content}
                   </p>
                 )}
 
-                {card.points && (
+                {/* {card.points && (
                   <ul className="space-y-2 sm:space-y-3">
                     {card.points.map((point, index) => (
                       <li
@@ -47,7 +46,7 @@ export default function ValuesGrid() {
                       </li>
                     ))}
                   </ul>
-                )}
+                )} */}
               </div>
             );
           })}

@@ -3,11 +3,10 @@ import Image from "next/image";
 export default function WhoWeAre() {
   return (
     <section className="relative bg-white overflow-hidden font-montserrat">
-      <div className="max-w-9xl mx-auto px-8 sm:px-10 md:px-12 lg:px-14 xl:px-20 py-16 sm:py-20 md:py-20">
+      <div className="max-w-9xl mx-auto px-6 sm:px-10 md:px-12 lg:px-14 xl:px-20 py-12 sm:py-16 md:py-20">
         <div className="grid gap-10 md:gap-12 lg:gap-15 grid-cols-1 lg:grid-cols-2 md:items-center">
-          {/* Left - Image */}
-          <div className="relative order-2">
-            <div className="relative w-full overflow-hidden rounded-xl">
+          <div className="relative order-2 lg:order-1">
+            <div className="relative w-full overflow-hidden rounded-lg">
               <Image
                 src="/images/who-we-are.jpg"
                 alt="Ethiopian coffee farm"
@@ -16,14 +15,11 @@ export default function WhoWeAre() {
                 className="w-full h-auto object-cover"
                 priority
               />
-              {/* Subtle gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/10 via-transparent to-transparent" />
             </div>
           </div>
 
-          {/* Right - Content */}
-          <div className="pr-0 md:pr-8 order-1">
-            {/* Label */}
+          <div className="pr-0 md:pr-8 order-1 lg:order-2">
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 sm:gap-3 mb-2 sm:mb-4">
                 <span className="h-px w-4 sm:w-6 bg-amber-400/60" />
@@ -38,48 +34,50 @@ export default function WhoWeAre() {
               The Sahwa Coffee Story
             </h1>
 
-            <div className="space-y-4 sm:space-y-5 text-xs sm:text-sm text-black leading-6 md:leading-7">
+            <div className="space-y-3 sm:space-y-4 md:space-y-5 text-[13px] sm:text-sm text-black leading-6 sm:leading-7">
               <p>
-                Welcome to Sahwa Coffee, an Ethiopian specialty coffee exporter
-                dedicated to bringing the finest Arabica beans from farm to
-                world. We work directly with smallholder farmers across
-                Ethiopia's most renowned growing regions — from the floral
-                highlands of Yirgacheffe to the bold depths of Sidamo — ensuring
-                every lot is hand-picked, carefully processed, and shipped at
-                peak freshness.
+                Sahwa Coffee was founded with a simple yet ambitious vision: to
+                share the true essence of Ethiopian coffee with the world.
+                Inspired by Ethiopia&apos;s centuries-old coffee heritage, the
+                company was established to create meaningful connections between
+                dedicated coffee producers and international buyers seeking
+                exceptional quality, authenticity, and consistency.
               </p>
-              {/* Subtle impact note */}
-              <p className="mt-6 text-xs sm:text-sm text-black italic leading-6 md:leading-7 border-l-2 border-amber-300 pl-4">
-                Every purchase supports the farmers and communities behind each
-                harvest. Every purchase supports the farmers and communities
-                behind each harvest. Every purchase supports the farmers and
-                communities behind each harvest.
+              <p className="mt-4 md:mt-6 text-[13px] sm:text-sm text-black italic leading-6 sm:leading-7 border-l-2 border-amber-300 pl-4">
+                The name<span className="font-semibold"> “Sahwa,” </span>{" "}
+                meaning awakening, represents the experience every cup of coffee
+                should deliver an awakening of the senses, culture, and
+                appreciation for Ethiopia&apos;s remarkable coffee legacy.
               </p>
               <p>
-                Our journey began in 2017 when our founder, Sifen, started Sahwa
-                Coffee in Addis Ababa with a simple belief: the world deserves
-                to taste Ethiopia's best coffee, and the farmers who grow it
-                deserve to be paid fairly for their craft. Today, we partner
-                with dedicated farming communities across the country, roasting
-                in small batches and exporting to the USA, Middle East, and soon
-                the UAE.
+                Our journey began with a deep commitment to understanding every
+                stage of the coffee value chain. From cultivation and harvesting
+                to processing, grading, roasting, cupping, quality evaluation,
+                and international trade, we believe excellence comes from
+                knowledge and continuous learning. This commitment allows us to
+                maintain the highest standards while ensuring every coffee we
+                export reflects the unique characteristics of its origin.
               </p>
 
               <p>
-                At Sahwa Coffee, quality is everything. We cup every lot, roast
-                to highlight each origin's unique character, and never
-                compromise on freshness. Our partners include high-end hotels
-                and specialty gift shops who share our passion for exceptional
-                coffee. From our roastery in Addis Ababa to your cup — we're
-                here to share the taste of Ethiopia with the world.
+                At Sahwa Coffee, we work closely with trusted farmers,
+                cooperatives, and producer partners across Ethiopia&apos;s
+                renowned coffee-growing regions. Every coffee lot is carefully
+                selected, professionally evaluated, and prepared according to
+                international quality standards before reaching global markets.
+                Through ethical sourcing, transparency, and traceability, we
+                strive to create sustainable value for both producers and
+                buyers.
+              </p>
+              <p>
+                Today, Sahwa Coffee is dedicated to representing Ethiopian
+                coffee with professionalism, integrity, and innovation. As we
+                continue to grow, our mission remains unchanged: to deliver
+                premium Ethiopian coffee while building lasting partnerships
+                that celebrate quality, trust, and the rich heritage of the
+                birthplace of Arabica coffee.
               </p>
             </div>
-
-            {/* Subtle impact note */}
-            <p className="mt-6 text-xs sm:text-sm text-black italic leading-6 md:leading-7 border-l-2 border-amber-300 pl-4">
-              Every purchase supports the farmers and communities behind each
-              harvest.
-            </p>
           </div>
         </div>
       </div>

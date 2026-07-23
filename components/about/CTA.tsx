@@ -4,7 +4,7 @@ import { ArrowRight, Coffee } from "lucide-react";
 export default function CTA() {
   return (
     <section className="relative bg-cream overflow-hidden font-montserrat">
-      <div className="relative max-w-4xl mx-auto px-8 sm:px-10 md:px-12 lg:px-14 py-16 sm:py-20 md:py-20">
+      <div className="relative max-w-4xl mx-auto px-6 sm:px-10 md:px-12 lg:px-14 xl:px-20 py-12 sm:py-16 md:py-20">
         <div className="text-center">
           <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-amber-100/40 mb-6 sm:mb-8">
             <Coffee className="w-7 h-7 sm:w-8 sm:h-8 text-amber-700" />
@@ -15,7 +15,7 @@ export default function CTA() {
             <br className="sm:hidden" /> it all begins?
           </h2>
 
-          <p className="text-sm sm:text-base text-black max-w-lg mx-auto mb-8 sm:mb-10 leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-sm lg:text-base text-black max-w-lg mx-auto mb-8 sm:mb-10 leading-relaxed">
             Explore our collection of single-origin Ethiopian coffees, each
             sourced directly from the farmers who grow them.
           </p>
