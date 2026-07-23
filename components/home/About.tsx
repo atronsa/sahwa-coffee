@@ -3,8 +3,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <section className="w-full bg-cream font-montserrat">
-      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 max-w-9xl px-8 sm:px-10 md:px-12 lg:px-14 xl:px-20 py-10 sm:py-14 md:py-16 lg:py-20 gap-8 lg:gap-12">
-        {/* Image Side */}
+      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 max-w-9xl px-6 sm:px-10 md:px-10 lg:px-14 xl:px-20 py-12 sm:py-16 md:py-20 gap-8 lg:gap-12">
         <div className="relative flex items-center justify-center order-2 lg:order-1">
           <div className="relative w-full aspect-4/4 sm:aspect-4/4 md:aspect-4/3 lg:aspect-5/5 overflow-hidden ">
             <Image
@@ -18,13 +17,12 @@ export default function About() {
           </div>
         </div>
 
-        {/* Content Side */}
         <div className="flex flex-col justify-center gap-4 sm:gap-6 lg:gap-8 order-1 lg:order-2 lg:pl-4 xl:pl-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 leading-tight text-center lg:text-left">
+          <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight text-stone-900 pb-2 sm:pb-0 text-center lg:text-left">
             Why Choose Us.
           </h2>
 
-          <div className="flex flex-col gap-5 text-xs sm:text-sm font-light leading-relaxed text-black">
+          <div className="space-y-3 sm:space-y-4 md:space-y-5 text-[13px] sm:text-sm text-black leading-6 sm:leading-7">
             <p>
               Sahwa Coffee is a premium Ethiopian coffee exporter dedicated to
               connecting the world&apos;s coffee market with the exceptional
