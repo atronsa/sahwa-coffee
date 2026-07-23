@@ -2,46 +2,55 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="w-full bg-cream font-montserrat px-8 py-10 ">
-      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 max-w-7xl">
+    <section className="w-full bg-cream font-montserrat">
+      <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 max-w-9xl px-8 sm:px-10 md:px-12 lg:px-14 xl:px-20 py-10 sm:py-14 md:py-16 lg:py-20 gap-8 lg:gap-12">
         {/* Image Side */}
-        <div className="relative flex items-center justify-center p-6 sm:p-8 md:p-10 lg:p-14 order-2 lg:order-1">
-          <div className="relative w-full aspect-[4/5] sm:aspect-[4/4] md:aspect-[5/6] lg:aspect-[4/5] overflow-hidden shadow-2xl">
+        <div className="relative flex items-center justify-center order-2 lg:order-1">
+          <div className="relative w-full aspect-4/4 sm:aspect-4/4 md:aspect-4/3 lg:aspect-5/5 overflow-hidden ">
             <Image
               src="/images/about.png"
               alt="About Sahwa Coffee"
               fill
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
-            {/* Subtle overlay for depth */}
             <div className="absolute inset-0 bg-black/10" />
           </div>
         </div>
 
         {/* Content Side */}
-        <div className="flex flex-col justify-center gap-5 sm:gap-6 md:gap-8 px-6 sm:px-8 md:px-10 lg:px-14 py-10 sm:py-12 md:py-0 order-1 lg:order-2">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-4xl font-bold text-stone-900 leading-tight">
+        <div className="flex flex-col justify-center gap-4 sm:gap-6 lg:gap-8 order-1 lg:order-2 lg:pl-4 xl:pl-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 leading-tight text-center lg:text-left">
             Why Choose Us.
           </h2>
 
-          <div className="flex flex-col gap-4 sm:gap-5 text-xs md:text-sm lg:text-base leading-relaxed text-black">
+          <div className="flex flex-col gap-5 text-xs sm:text-sm font-light leading-relaxed text-black">
             <p>
-              Sahwa Coffee began as a single export contract between an Addis
-              Ababa trader and a Hamburg roaster. That handshake has grown into
-              a supply chain spanning Ethiopia, Kenya, Colombia, Rwanda, Yemen,
-              and Brazil.
+              Sahwa Coffee is a premium Ethiopian coffee exporter dedicated to
+              connecting the world&apos;s coffee market with the exceptional
+              quality and heritage of Ethiopian Arabica. We work closely with
+              trusted producers to source coffees that reflect the unique
+              character, diversity, and authenticity of Ethiopia&apos;s renowned
+              coffee-growing regions. Every lot is selected with precision to
+              ensure outstanding quality, consistency, and traceability.
             </p>
             <p>
-              We believe the best coffee comes from knowing the people who grow
-              it. Our team spends months each year at origin — cupping,
-              negotiating, and building the kind of trust that shows up in the
-              cup.
+              Quality is at the heart of everything we do. From sourcing and
+              processing to grading, quality evaluation, packaging, and export
+              logistics, every stage is managed with meticulous attention to
+              international standards. Our commitment to excellence ensures that
+              every shipment preserves the integrity, freshness, and distinctive
+              flavor profile expected by specialty coffee professionals
+              worldwide.
             </p>
             <p>
-              From farm selection to final shipment, quality drives every
-              decision. We cup every lot, inspect every bag, and stand behind
-              every contract we sign.
+              At Sahwa Coffee, we believe successful partnerships are built on
+              trust, transparency, and reliability. By combining deep industry
+              knowledge with customer-focused service, we provide tailored
+              coffee solutions for importers, roasters, distributors, and
+              retailers. Our goal is not only to supply exceptional Ethiopian
+              coffee but also to build long-term relationships that create
+              lasting value for our partners across global markets.
             </p>
           </div>
         </div>
