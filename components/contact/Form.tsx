@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useCallback, type ChangeEvent, type FormEvent } from "react";
-import { ChevronRight, Loader2 } from "lucide-react";
-import { z } from "zod";
+import { ChevronRight, Loader2, Check, X } from "lucide-react";
 import {
   contactFormSchema,
   type ContactFormValues,
@@ -22,8 +21,8 @@ const EMPTY_VALUES: ContactFormValues = {
 export default function Form() {
   const [values, setValues] = useState<ContactFormValues>(EMPTY_VALUES);
   const [errors, setErrors] = useState<ContactFormErrors>({});
-  const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleChange = useCallback(
@@ -32,28 +31,28 @@ export default function Form() {
       setErrors((prev) =>
         prev[field] ? { ...prev, [field]: undefined } : prev,
       );
-      if (submitted) setSubmitted(false);
+      if (successMessage) setSuccessMessage(null);
       if (submitError) setSubmitError(null);
     },
-    [submitted, submitError],
+    [successMessage, submitError],
   );
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSubmitError(null);
+    setSuccessMessage(null);
 
     const result = contactFormSchema.safeParse(values);
 
     if (!result.success) {
       const fieldErrors: ContactFormErrors = {};
-      const flattened = z.flattenError(result.error);
+      const flattened = result.error.flatten();
       for (const [field, messages] of Object.entries(flattened.fieldErrors)) {
         if (messages?.[0]) {
           fieldErrors[field as keyof ContactFormValues] = messages[0];
         }
       }
       setErrors(fieldErrors);
-      setSubmitted(false);
       return;
     }
 
@@ -67,11 +66,15 @@ export default function Form() {
         body: JSON.stringify(result.data),
       });
 
+      const data = await response.json().catch(() => null);
+
       if (!response.ok) {
-        throw new Error("Failed to send message. Please try again.");
+        throw new Error(data?.error ?? "Failed to send message.");
       }
 
-      setSubmitted(true);
+      setSuccessMessage(
+        "Message sent successfully! We'll get back to you within 24 hours.",
+      );
       setValues(EMPTY_VALUES);
     } catch (error) {
       setSubmitError(
@@ -86,10 +89,10 @@ export default function Form() {
 
   return (
     <div className="bg-neutral-100 p-6 sm:p-10 md:p-12 w-full max-w-lg font-montserrat">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-neutral-900 mb-3">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-neutral-900 mb-3">
         Get in Touch
       </h2>
-      <p className="text-xs sm:text-sm text-black leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-sm">
+      <p className="text-[13px] sm:text-sm text-black leading-relaxed mb-6 sm:mb-8 md:mb-10 max-w-sm">
         Tell us your needs. We'll make it happen.
       </p>
 
@@ -113,19 +116,36 @@ export default function Form() {
           />
         ))}
 
-        {submitError && (
-          <p
-            role="alert"
-            className="text-[10px] sm:text-xs font-medium text-red-600 bg-red-50 p-3 rounded-lg border border-red-200"
+        {/* Success message */}
+        {successMessage && (
+          <div
+            role="status"
+            className="flex items-start gap-2 bg-green-100 rounded-lg p-3 border border-green-500/20"
           >
-            {submitError}
-          </p>
+            <Check className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 shrink-0 mt-0.5" />
+            <p className="text-[11px] sm:text-xs font-medium text-green-400">
+              {successMessage}
+            </p>
+          </div>
+        )}
+
+        {/* Error message */}
+        {submitError && (
+          <div
+            role="alert"
+            className="flex items-start gap-2 bg-red-100 rounded-lg p-3 border border-red-500/20"
+          >
+            <X className="w-3 h-3 sm:w-4 sm:h-4 text-red-400 shrink-0 mt-0.5" />
+            <p className="text-[11px] sm:text-xs font-medium text-red-400">
+              {submitError}
+            </p>
+          </div>
         )}
 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex items-center gap-2 bg-neutral-900 text-white text-[10px] sm:text-xs font-medium rounded-full pl-5 pr-6 py-3 mt-2 hover:bg-neutral-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer w-full sm:w-auto justify-center sm:justify-start"
+          className="inline-flex items-center gap-2 bg-neutral-900 text-white text-[12px] sm:text-xs font-medium rounded-full pl-5 pr-6 py-3 mt-2 hover:bg-neutral-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer w-full sm:w-auto justify-center sm:justify-start"
         >
           {isSubmitting ? (
             <>
@@ -139,19 +159,6 @@ export default function Form() {
             </>
           )}
         </button>
-
-        {submitted && (
-          <div
-            role="status"
-            className="text-[10px] sm:text-xs text-green-700 bg-green-50 p-4 rounded-lg border border-green-200"
-          >
-            <p className="font-medium mb-2">Message sent successfully!</p>
-            <p className="text-green-600">
-              We've received your message and will get back to you within 24
-              hours.
-            </p>
-          </div>
-        )}
       </form>
     </div>
   );
@@ -177,7 +184,7 @@ function FormField({
   disabled?: boolean;
 }) {
   const errorId = `${id}-error`;
-  const sharedClasses = `w-full bg-transparent border-b outline-none text-xs text-neutral-900 placeholder-neutral-400 py-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
+  const sharedClasses = `w-full bg-transparent border-b outline-none text-[11px] sm:text-sm text-neutral-900 placeholder-neutral-400 pt-2 pb-1 transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
     error
       ? "border-red-400 focus:border-red-500"
       : "border-neutral-300 focus:border-neutral-900"
@@ -211,7 +218,11 @@ function FormField({
         />
       )}
       {error && (
-        <p id={errorId} role="alert" className="mt-1.5 text-xs text-red-500">
+        <p
+          id={errorId}
+          role="alert"
+          className="mt-1.5 text-[11px] sm:text-xs text-red-500 font-medium"
+        >
           {error}
         </p>
       )}

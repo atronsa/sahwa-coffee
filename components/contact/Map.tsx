@@ -44,7 +44,7 @@ export default function Map() {
                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
               />
             </svg>
-            <span className="whitespace-nowrap text-[10px] sm:text-xs">
+            <span className="whitespace-nowrap text-[11px] sm:text-xs">
               Get Directions
             </span>
           </a>
@@ -67,7 +67,7 @@ export default function Map() {
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
               />
             </svg>
-            <span className="whitespace-nowrap text-[10px] sm:text-xs">
+            <span className="whitespace-nowrap text-[11px] sm:text-xs">
               View Larger Map
             </span>
           </a>
