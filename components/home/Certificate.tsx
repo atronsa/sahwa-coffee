@@ -14,13 +14,13 @@ export default function Certificate() {
       />
 
       <div className="absolute inset-0 bg-black/70" />
-      <div className="relative z-10 flex h-full items-center px-8 sm:px-10 md:px-16 lg:px-24">
+      <div className="relative z-10 flex h-full items-center px-6 sm:px-10 md:px-10 lg:px-14 xl:px-20 py-12 sm:py-16 md:py-20">
         <div className="flex flex-col gap-6 max-w-3xl">
           <h2 className="font-(family-name:--font-dancing-script) text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
-            We are a by ECTA.
+            We are certified a by ECTA.
           </h2>
 
-          <p className="max-w-xl md:max-w-2xl text-xs sm:text-sm font-light leading-[1.7] text-cream font-montserrat">
+          <p className="max-w-xl md:max-w-2xl text-[12px] sm:text-sm font-light leading-[1.7] text-cream font-montserrat">
             Sahwa Coffee operates under a valid Commercial Coffee Export License
             issued by the Ethiopian Coffee and Tea Authority (ECTA). This
             certification authorizes the company to export Ethiopian coffee in
