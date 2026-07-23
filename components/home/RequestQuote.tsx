@@ -15,14 +15,14 @@ export default function RequestQuote() {
 
       <div className="absolute inset-0 bg-black/70" />
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center gap-6 px-8 text-center">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center gap-6 px-4 text-center">
         <span className="inline-flex items-center gap-2 text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-amber-400 font-semibold">
           <span className="h-px w-6 bg-amber-400" />
           Get Started
           <span className="h-px w-6 bg-amber-400" />
         </span>
 
-        <h2 className="font-(family-name:--font-dancing-script) text-2xl sm:text-3xl font-bold text-white leading-tight md:text-4xl lg:text-5xl max-w-2xl">
+        <h2 className="font-(family-name:--font-dancing-script) text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-2xl">
           Ready to Source Premium Coffee?
         </h2>
 
