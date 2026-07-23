@@ -1,34 +1,32 @@
+import Image from "next/image";
+
 export default function Contact() {
   return (
-    <section className="w-full bg-cream">
-      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 min-h-180 max-w-9xl">
-
-        {/* Left: text */}
-        <div className="flex flex-col justify-center gap-8 px-10 py-16 md:px-16 md:py-24">
-
-          {/* Title */}
-          <h2 className="font-(family-name:--font-dancing-script) text-4xl font-bold text-stone-900 leading-tight sm:text-5xl md:text-6xl">
+    <section className="w-full bg-cream font-montserrat">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 max-w-9xl px-8 sm:px-10 md:px-12 lg:px-14 xl:px-20 py-10 sm:py-14 md:py-16 lg:py-20 gap-8 lg:gap-12">
+        <div className="flex flex-col justify-center gap-8 lg:pr-4 xl:pr-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 leading-tight text-center md:text-left">
             Get In Touch.
           </h2>
 
           {/* Description */}
-          <div className="flex flex-col gap-5 text-sm font-light leading-relaxed text-black font-montserrat">
+          <div className="flex flex-col gap-5 text-xs sm:text-sm font-light leading-relaxed text-black">
             <p>
-              Whether you're an importer, roaster, or distributor — we'd love
-              to hear from you. Tell us what you're looking for and we'll get
-              back within 24 hours.
+              Whether you're an importer, roaster, or distributor we'd love to
+              hear from you. Tell us what you're looking for and we'll get back
+              within 24 hours.
             </p>
             <p>
               We work with partners of all sizes, from boutique roasters to
-              large-scale distributors. Every conversation starts the same way —
+              large-scale distributors. Every conversation starts the same way
               with coffee.
             </p>
           </div>
 
           {/* CTA */}
           <a
-            href="mailto:hello@sahwacoffee.com"
-            className="group relative inline-flex w-fit items-center gap-3 overflow-hidden border border-stone-900 px-8 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-900 transition-all duration-500 hover:bg-stone-900 hover:text-cream focus:outline-none font-montserrat"
+            href="/contact"
+            className="group relative inline-flex w-fit items-center gap-3 overflow-hidden border border-stone-900 px-8 py-4 mx-auto md:mx-0 text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-900 transition-all duration-500 hover:bg-stone-900 hover:text-cream focus:outline-none"
           >
             <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
             Send Us a Message
@@ -40,34 +38,38 @@ export default function Contact() {
               stroke="currentColor"
               strokeWidth={2}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
             </svg>
           </a>
-
         </div>
 
         {/* Right: image */}
-        <div className="relative flex items-center justify-center min-h-50 md:min-h-full p-15">
-          <div className="relative w-full">
-            <img
+        <div className="relative flex items-center justify-center">
+          <div className="relative w-full aspect-4/4 sm:aspect-4/4 md:aspect-4/3 lg:aspect-5/5 overflow-hidden">
+            <Image
               src="/images/place.jpg"
               alt="Sahwa Coffee Location"
-              className="w-full h-auto object-contain block"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
             />
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-black/10" />
 
             {/* Location badge */}
-            <div className="absolute bottom-5 left-5 border-l-2 border-white/50 pl-4">
-              <span className="text-[9px] uppercase tracking-[0.2em] text-white/60 font-montserrat block">
+            <div className="absolute bottom-5 left-5 border-l-2 border-cream pl-4">
+              <span className="text-[8px] md:text-[9px] uppercase tracking-[0.2em] text-cream font-montserrat block">
                 Headquartered in
               </span>
-              <span className="font-(family-name:--font-dancing-script) text-2xl font-bold text-white">
+              <span className="text-xl md:text-2xl font-bold text-cream">
                 Addis Ababa
               </span>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
