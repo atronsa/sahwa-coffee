@@ -28,7 +28,7 @@ export default function Contact() {
             href="/contact"
             className="group relative inline-flex w-fit items-center gap-3 overflow-hidden border border-stone-900 px-8 py-4 mx-auto md:mx-0 text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-900 transition-all duration-500 hover:bg-stone-900 hover:text-cream focus:outline-none"
           >
-            <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
+            <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/10 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
             Send Us a Message
             <svg
               xmlns="http://www.w3.org/2000/svg"
