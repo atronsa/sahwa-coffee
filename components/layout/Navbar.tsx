@@ -63,24 +63,25 @@ export default function NavBar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 z-50 flex w-full items-center justify-between px-4 sm:px-6 md:px-10 py-4 sm:py-5 transition-colors duration-300 ${
-          showBackground ? "bg-black/50 backdrop-blur-sm" : "bg-transparent"
+        className={`fixed top-0 left-0 z-50 flex w-full items-center justify-between px-6 sm:px-10 md:px-12 py-6 sm:py-5 transition-colors duration-300 ${
+          showBackground ? "bg-black/50 backdrop-blur-md" : "bg-transparent"
         }`}
       >
         <div className="shrink-0">
-          <Image
-            src={Logo}
-            alt="Sahwa Coffee Logo"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="h-8 sm:h-9 md:h-10 w-auto object-contain"
-          />
+          <Link href="/">
+            <Image
+              src={Logo}
+              alt="Sahwa Coffee Logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-7 md:h-10 w-auto object-contain"
+            />
+          </Link>
         </div>
-
         <span
           aria-hidden="true"
-          className={`pointer-events-none ${isBrandWhite ? "text-cream" : "text-stone-900"} absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-base sm:text-xl md:text-2xl font-semibold font-(family-name:--font-dancing-script)`}
+          className={`pointer-events-none ${isBrandWhite ? "text-cream" : "text-stone-900"} absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-lg sm:text-xl md:text-2xl font-semibold font-(family-name:--font-dancing-script)`}
         >
           Sahwa Coffee
         </span>
@@ -93,10 +94,10 @@ export default function NavBar() {
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-menu"
         >
-          <div className="flex h-5 w-8 flex-col justify-between">
+          <div className="flex h-4 w-6 md:h-5 md:w-8 flex-col justify-between">
             <span
               className={`block h-0.5 w-full origin-center rounded-full bg-current transition-all duration-300 ${
-                mobileMenuOpen ? "translate-y-[9px] rotate-45" : ""
+                mobileMenuOpen ? "translate-y-2.25 rotate-45" : ""
               }`}
             />
             <span
@@ -106,7 +107,7 @@ export default function NavBar() {
             />
             <span
               className={`block h-0.5 w-full origin-center rounded-full bg-current transition-all duration-300 ${
-                mobileMenuOpen ? "-translate-y-[9px] -rotate-45" : ""
+                mobileMenuOpen ? "-translate-y-2.25 -rotate-45" : ""
               }`}
             />
           </div>
@@ -125,13 +126,13 @@ export default function NavBar() {
             : "pointer-events-none opacity-0"
         }`}
       >
-        <ul className="space-y-8 text-center font-poppins">
+        <ul className="space-y-8 sm:space-y-6 md:space-y-8 text-center font-poppins">
           {NAV_LINKS.map(({ label, href }) => (
             <li key={label}>
               <Link
                 href={href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="relative text-cream inline-block cursor-pointer px-6 py-2 text-sm after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full sm:text-base sm:py-3 md:text-lg md:py-2"
+                className="relative text-cream inline-block cursor-pointer px-6 py-1 md:py-2 text-sm sm:py-3 md:text-base after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full"
               >
                 {label}
               </Link>
