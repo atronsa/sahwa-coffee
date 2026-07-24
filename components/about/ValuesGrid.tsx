@@ -29,7 +29,7 @@ export default function ValuesGrid() {
                 </div>
 
                 {card.content && (
-                  <p className="text-[13px] sm:text-sm text-black leading-6 sm:leading-7">
+                  <p className="text-[12px] sm:text-[13px] text-black leading-6 md:leading-7">
                     {card.content}
                   </p>
                 )}
