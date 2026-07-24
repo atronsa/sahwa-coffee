@@ -72,9 +72,6 @@ export default function ProductDetail({ slug }: ProductDetailProps) {
                 <span className="text-xl sm:text-2xl font-bold text-amber-700">
                   ${coffee.price.toFixed(2)}
                 </span>
-                <span className="text-[10px] sm:text-xs font-medium uppercase tracking-wider text-stone-400">
-                  / 12oz bag
-                </span>
               </div>
 
               {/* Short description */}
@@ -91,6 +88,22 @@ export default function ProductDetail({ slug }: ProductDetailProps) {
                 <p className="text-xs sm:text-sm leading-relaxed text-black">
                   {coffee.story}
                 </p>
+              </div>
+              {/* Best For Section */}
+              <div className="mt-6">
+                <h3 className="text-sm font-semibold text-stone-900 mb-3">
+                  Best For
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {coffee.bestFor.map((use) => (
+                    <span
+                      key={use}
+                      className="rounded-full bg-amber-50 border border-amber-200 px-3 py-1 text-[10px] sm:text-xs font-medium text-amber-800"
+                    >
+                      {use}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               {/* Tasting Experience Section */}
@@ -204,16 +217,6 @@ export default function ProductDetail({ slug }: ProductDetailProps) {
                     </p>
                   </div>
                 </div>
-              </div>
-
-              {/* Body */}
-              <div className="mt-4 flex items-center gap-2 pt-4 border-t border-stone-200">
-                <span className="text-[10px] sm:text-xs text-stone-900 font-semibold uppercase tracking-wider">
-                  Body:
-                </span>
-                <span className="text-[10px] sm:text-xs font-medium text-black">
-                  {coffee.body}
-                </span>
               </div>
             </div>
           </div>
