@@ -2,7 +2,7 @@ import { HOME_PRODUCTS } from "@/data/home-products";
 
 export default function Product() {
   return (
-    <section className="w-full bg-cream py-12 sm:py-14 md:py-16 lg:py-20 px-8 sm:px-10 md:px-12 lg:px-14 xl:px-20 font-montserrat">
+    <section className="w-full bg-cream py-12 sm:py-14 md:py-16 lg:py-20 px-6 sm:px-10 md:px-12 lg:px-14 xl:px-20 font-montserrat">
       {/* Product cards */}
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 sm:gap-8 lg:grid-cols-2">
         {HOME_PRODUCTS.map((product) => (

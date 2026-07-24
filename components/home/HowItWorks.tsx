@@ -39,7 +39,7 @@ export default function HowItWorks() {
                   {step.title}
                 </h3>
                 <div className="h-px w-8 bg-amber-200 transition-colors duration-300 group-hover:bg-amber-400/60" />
-                <p className="text-[13px] sm:text-sm leading-6 sm:leading-6 text-black font-montserrat">
+                <p className="text-[12px] sm:text-[13px] leading-6 sm:leading-6 text-black font-montserrat">
                   {step.description}
                 </p>
               </div>
@@ -55,12 +55,12 @@ export default function HowItWorks() {
         </div>
 
         <div className="mt-4 sm:mt-5 flex flex-col gap-4 bg-white p-6 sm:p-8 text-center border border-amber-100/50 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[13px] sm:text-sm text-black font-montserrat">
+          <p className="text-[12px] sm:text-[13px] text-black font-montserrat">
             Have questions before getting started?
           </p>
           <a
             href="/contact"
-            className="group relative inline-flex w-fit items-center justify-center mx-auto md:mx-0 mt-2 md:mt-0 gap-2 sm:gap-3 overflow-hidden rounded-full bg-stone-900 px-6 sm:px-8 py-3 sm:py-4 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white transition-all duration-300 hover:bg-stone-800 hover:shadow-lg focus:outline-none font-montserrat"
+            className="group relative inline-flex w-fit items-center justify-center mx-auto md:mx-0 mt-2 md:mt-0 gap-2 sm:gap-3 overflow-hidden rounded-full bg-stone-900 px-6 sm:px-8 py-3 sm:py-4 text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white transition-all duration-300 hover:bg-stone-800 hover:shadow-lg focus:outline-none font-montserrat"
           >
             Talk to Our Team
             <svg

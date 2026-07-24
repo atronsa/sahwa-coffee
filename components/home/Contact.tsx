@@ -10,7 +10,7 @@ export default function Contact() {
           </h2>
 
           {/* Description */}
-          <div className="flex flex-col gap-4 sm:gap-5 text-[13px] sm:text-sm font-light leading-6 text-black">
+          <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 text-[13px] sm:text-sm font-light leading-6 text-black">
             <p>
               Whether you're an importer, roaster, or distributor we'd love to
               hear from you. Tell us what you're looking for and we'll get back
@@ -26,7 +26,7 @@ export default function Contact() {
           {/* CTA */}
           <a
             href="/contact"
-            className="group relative inline-flex w-fit items-center gap-3 overflow-hidden border border-stone-900 px-8 py-4 mx-auto md:mx-0 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.2em] text-stone-900 transition-all duration-500 hover:bg-stone-900 hover:text-cream focus:outline-none"
+            className="group relative inline-flex w-fit items-center gap-3 overflow-hidden border border-stone-900 px-8 py-4 mx-auto md:mx-0 text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-900 transition-all duration-500 hover:bg-stone-900 hover:text-cream focus:outline-none"
           >
             <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/10 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
             Send Us a Message

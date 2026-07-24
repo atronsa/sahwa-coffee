@@ -24,7 +24,7 @@ export default function BentoGrid() {
             <div className="h-px w-8 sm:w-10 bg-amber-400/50" />
             <p className="text-[11px] sm:text-xs font-light leading-relaxed text-white/60 font-montserrat">
               We travel to farms, not trade floors sourcing directly from
-              highland cooperatives across 6 countries.
+              highland cooperatives across 6+ countries.
             </p>
           </div>
         </div>
