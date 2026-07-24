@@ -9,15 +9,15 @@ export default function Product() {
 
   return (
     <main className="min-h-screen bg-cream font-montserrat">
-      <section className="relative overflow-hidden px-4 sm:px-6 md:px-10 lg:px-14 xl:px-20 pb-12 sm:pb-16 md:pb-20 pt-24 sm:pt-28 md:pt-32">
+      <section className="relative overflow-hidden px-6 sm:px-10 md:px-12 lg:px-14 xl:px-20 pb-12 sm:pb-16 md:pb-20 pt-24 sm:pt-28 md:pt-32">
         <div className="relative z-10 mx-auto max-w-7xl">
           <header className="mb-10 sm:mb-12 md:mb-14 text-center md:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-stone-900">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium tracking-tight text-stone-900 mb-4 md:mb-6 leading-tight">
               The Coffee Bar
             </h1>
-            <p className="mx-auto mt-3 sm:mt-4 md:mt-6 text-xs sm:text-sm leading-6 sm:leading-7 text-black md:mx-0">
-              Our collection celebrates the birthplace of coffee — Ethiopia.
-              Each roast is sourced directly from smallholder farmers and
+            <p className="mx-auto mt-3 sm:mt-4 md:mt-6 text-[13px] sm:text-sm leading-6 sm:leading-7 text-black md:mx-0">
+              Our collection celebrates the birthplace of coffee Ethiopia. Each
+              roast is sourced directly from smallholder farmers and
               cooperatives across the country's most renowned growing regions.
               We visit every farm, cup every lot, and roast in small batches to
               honor the distinct character of each origin. Discover the lineup
@@ -49,7 +49,7 @@ export default function Product() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {COFFEES.map((coffee) => (
               <CoffeeCard key={coffee.id} coffee={coffee} />
             ))}
