@@ -1,4 +1,15 @@
-export const COMPANY_LINKS = [
+export interface Footer {
+  label: string;
+  href: string;
+}
+
+interface ContactInfoItem {
+  icon: string;
+  label: string;
+  href?: string;
+}
+
+export const COMPANY_LINKS: Footer[] = [
   { label: "About Us", href: "/about-us" },
   { label: "Products", href: "/products" },
   { label: "Contact Us", href: "/contact" },
@@ -8,24 +19,27 @@ export const COMPANY_LINKS = [
 
 export const MORE_LINKS = [{ label: "Certificate", href: "#" }] as const;
 
-export const PRODUCT_LINKS = [
+export const PRODUCT_LINKS: Footer[] = [
   { label: "Yirgacheffe", href: "/products/yirgacheffe" },
-  { label: "Sidamo", href: "/products/sidamo" },
+  { label: "Sidama", href: "/products/sidama" },
   { label: "Guji", href: "/products/guji" },
   { label: "Limu", href: "/products/limu" },
   { label: "Harrar", href: "/products/harrar" },
 ] as const;
 
-/* icon: string key resolved to a component in Footer.tsx (contactIcons map) */
-export const CONTACT_INFO = [
-  { icon: "mapPin", label: "Bole Road, Addis Ababa, Ethiopia" },
+export const CONTACT_INFO: ContactInfoItem[] = [
+  {
+    icon: "mapPin",
+    label: "Tirtira Building, Bole Atlas, Addis Ababa, Ethiopia",
+    href: "https://maps.app.goo.gl/HnAJaYrwjsWeJFnx9?g_st=ic",
+  },
   { icon: "phone", label: "+251-940-404-422", href: "tel:+251940404422" },
   {
     icon: "mail",
     label: "hello@sahwacoffee.com",
     href: "mailto:hello@sahwacoffee.com",
   },
-] as const;
+];
 
 export const SOCIAL_LINKS = [
   {
