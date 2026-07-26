@@ -16,10 +16,10 @@ function iconBase(size: number | undefined, rest: SVGProps<SVGSVGElement>) {
   };
 }
 
-export function FacebookIcon({ size, ...rest }: IconProps) {
+export function TikTokIcon({ size, ...rest }: IconProps) {
   return (
     <svg {...iconBase(size, rest)}>
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
     </svg>
   );
 }
@@ -33,21 +33,29 @@ export function XIcon({ size, ...rest }: IconProps) {
   );
 }
 
-export function LinkedInIcon({ size, ...rest }: IconProps) {
+export function InstagramIcon({ size, ...rest }: IconProps) {
   return (
     <svg {...iconBase(size, rest)}>
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect x="2" y="9" width="4" height="12" />
-      <circle cx="4" cy="4" r="2" />
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="17.5" cy="6.5" r="1.5" />
     </svg>
   );
 }
 
-export function YoutubeIcon({ size, ...rest }: IconProps) {
+export function TelegramIcon({ size, ...rest }: IconProps) {
   return (
     <svg {...iconBase(size, rest)}>
-      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29.94 29.94 0 0 0 1 11.75a29.94 29.94 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29.94 29.94 0 0 0 .46-5.25 29.94 29.94 0 0 0-.46-5.33z" />
-      <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+      <path d="M21.54 3.64a1.25 1.25 0 0 0-1.27-.15L3.29 9.82c-.92.36-1.08 1.31-.26 1.77l4.17 2.32 1.57 4.87c.2.58.94.72 1.33.22l2.22-2.88 4.05 2.99c.56.41 1.33.12 1.52-.57l3.78-14.24a.75.75 0 0 0-.13-.66z" />
+      <path d="M9.5 12.5l.5 4.5 1-4 10-8" />
+    </svg>
+  );
+}
+
+export function FacebookIcon({ size, ...rest }: IconProps) {
+  return (
+    <svg {...iconBase(size, rest)}>
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
     </svg>
   );
 }
@@ -59,10 +67,23 @@ export type SocialLink = {
 };
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { href: "#", label: "Facebook", Icon: FacebookIcon },
-  { href: "#", label: "X", Icon: XIcon },
-  { href: "#", label: "LinkedIn", Icon: LinkedInIcon },
-  { href: "#", label: "YouTube", Icon: YoutubeIcon },
+  {
+    href: "https://www.tiktok.com/@sahwacoffee",
+    label: "TikTok",
+    Icon: TikTokIcon,
+  },
+  { href: "https://x.com/sahwacoffee", label: "X", Icon: XIcon },
+  {
+    href: "https://www.instagram.com/sahwacoffee_",
+    label: "Instagram",
+    Icon: InstagramIcon,
+  },
+  { href: "https://t.me/sahwacoffee", label: "TelegramI", Icon: TelegramIcon },
+  {
+    href: "https://www.facebook.com/sahwacoffee.et",
+    label: "Facebook",
+    Icon: FacebookIcon,
+  },
 ];
 
 export type ContactDetail =
@@ -74,12 +95,12 @@ export const CONTACT_DETAILS: ContactDetail[] = [
   {
     type: "lines",
     label: "Call Center",
-    lines: ["+ (911) 111 111", "+ (922) 222 222"],
+    lines: ["+251 940 404 422", "+251 929 244 144"],
   },
   {
     type: "lines",
     label: "Our Location",
-    lines: ["Ethiopia, Addid Ababa – 4 killo"],
+    lines: ["Tirtira Building, Bole Atlas, Addis Ababa, Ethiopia"],
   },
   {
     type: "text",
