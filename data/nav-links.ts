@@ -6,6 +6,6 @@ export type Nav = {
 export const NAV_LINKS: Nav[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "about-us" },
-  { label: "Product", href: "products" },
+  { label: "Products", href: "products" },
   { label: "Contact", href: "contact" },
 ];
