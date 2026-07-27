@@ -51,7 +51,7 @@ export default function Contact() {
         <div className="relative flex items-center justify-center">
           <div className="relative w-full aspect-4/4 sm:aspect-4/4 md:aspect-4/3 lg:aspect-5/5 overflow-hidden">
             <Image
-              src="/images/place.jpg"
+              src="/images/place.webp"
               alt="Sahwa Coffee Location"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

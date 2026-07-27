@@ -33,50 +33,22 @@ export default function Hero() {
         });
       });
     });
-
-    // ✅ Lazy load the video
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && videoRef.current) {
-          videoRef.current.load();
-          setIsVideoLoaded(true);
-        }
-      },
-      { threshold: 0.1 },
-    );
-
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
-    }
-
-    return () => observer.disconnect();
   }, []);
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/videos/intro.mp4')",
-          opacity: isVideoLoaded ? 0 : 1,
-          transition: "opacity 0.5s ease",
-        }}
-      />
-
       <video
         ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        preload="none" // ✅ Don't load until needed
+        preload="auto"
+        poster="/images/intro-poster.webp"
+        onLoadedData={() => setIsVideoLoaded(true)}
         className="absolute inset-0 h-full w-full object-cover"
-        style={{
-          opacity: isVideoLoaded ? 1 : 0,
-          transition: "opacity 0.5s ease",
-        }}
       >
-        <source src="/videos/intro.mp4" type="video/mp4" />
+        <source src="/videos/intro.webm" type="video/webm" />
       </video>
 
       <div className="absolute inset-0 bg-black/40" />

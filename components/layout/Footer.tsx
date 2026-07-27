@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/images/logo.png";
+import Logo from "@/public/images/logo.webp";
 import {
   MapPin,
   Phone,
@@ -250,6 +250,7 @@ export default function Footer() {
                     {"href" in item && item.href ? (
                       <Link
                         href={item.href}
+                        target="_blank"
                         className="text-[10px] sm:text-xs text-cream hover:text-amber-400 transition-colors leading-relaxed break-all pr-2 sm:pr-3"
                       >
                         {item.label}

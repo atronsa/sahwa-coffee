@@ -7,7 +7,7 @@ export default function About() {
         <div className="relative flex items-center justify-center order-2 lg:order-1">
           <div className="relative w-full aspect-4/4 sm:aspect-4/4 md:aspect-4/3 lg:aspect-5/5 overflow-hidden ">
             <Image
-              src="/images/about.png"
+              src="/images/about.webp"
               alt="About Sahwa Coffee"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

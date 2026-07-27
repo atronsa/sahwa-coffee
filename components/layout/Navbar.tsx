@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Logo from "@/public/images/logo.png";
+import Logo from "@/public/images/logo.webp";
 import { NAV_LINKS } from "@/data/nav-links";
 
 export default function NavBar() {
@@ -72,10 +72,11 @@ export default function NavBar() {
             <Image
               src={Logo}
               alt="Sahwa Coffee Logo"
-              width={0}
-              height={0}
-              sizes="100vw"
+              width={80}
+              height={80}
+              sizes="(max-width: 768px) 28px, 40px"
               className="h-7 md:h-10 w-auto object-contain"
+              priority
             />
           </Link>
         </div>

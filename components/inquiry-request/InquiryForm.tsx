@@ -41,7 +41,7 @@ const EMPTY_VALUES = {
   preferredOrigin: "",
   grade: "",
   harvestPreference: "",
-  quantityType: "range" as const,
+  quantityType: "range" as "range" | "exact",
   quantityRange: "",
   incoterm: "",
   deliveryDate: "",

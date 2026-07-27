@@ -8,9 +8,10 @@ export default function RequestQuote() {
         loop
         muted
         playsInline
+        preload="none"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/videos/request.mp4" type="video/mp4" />
+        <source src="/videos/request.webm" type="video/webm" />
       </video>
 
       <div className="absolute inset-0 bg-black/70" />

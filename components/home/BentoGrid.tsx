@@ -8,7 +8,7 @@ export default function BentoGrid() {
         <div
           className="group col-span-1 sm:col-span-2 lg:col-span-4 lg:row-span-3 relative overflow-hidden min-h-70 sm:min-h-87.5 lg:min-h-0"
           style={{
-            backgroundImage: "url('/images/about.png')",
+            backgroundImage: "url('/images/about.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

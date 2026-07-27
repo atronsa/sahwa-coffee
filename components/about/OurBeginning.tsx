@@ -77,7 +77,7 @@ export default function OurBeginning() {
           <div className="order-2">
             <div className="relative w-full overflow-hidden rounded-lg">
               <Image
-                src="/images/who-we-are.jpg"
+                src="/images/who-we-are.webp"
                 alt="Ethiopian coffee farm"
                 width={800}
                 height={1000}
