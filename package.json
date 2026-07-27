@@ -2,17 +2,17 @@
   "name": "sahwa-coffee",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --hostname 0.0.0.0",
+"scripts": {
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
-  },
+},
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.3",
     "@prisma/client": "^5.22.0",
     "lucide-react": "^1.23.0",
-    "next": "16.2.9",
+    "next": "^16.2.12",
     "next-auth": "^4.24.15",
     "postcss": "^8.5.15",
     "prisma": "^5.22.0",
