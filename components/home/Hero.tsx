@@ -57,10 +57,11 @@ export default function Hero() {
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
         <h1
           ref={headingRef}
-          className="font-(family-name:--font-dancing-script) text-4xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.15] sm:leading-[1.1] text-cream px-2"
+          className="font-(family-name:--font-dancing-script) text-3xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.15] sm:leading-[1.1] text-cream px-2"
         >
-          Coffee from the <em className="not-italic text-amber-300">origin</em>
-          <br className="block" /> to your table
+          Awaken Your Senses with{" "}
+          <em className="not-italic text-amber-300">the Taste of</em>
+          <br className="block" /> Ethiopian Coffee.
         </h1>
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-cream">
           <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.25em]">

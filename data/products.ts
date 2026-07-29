@@ -146,7 +146,7 @@ export const COFFEES: Coffee[] = [
   },
   {
     id: "jimma",
-    name: "Ethiopian Djimmah (Jimma)",
+    name: "Ethiopian Jimma",
     price: 15.5,
     description:
       "Djimmah is one of Ethiopia's largest coffee-producing regions, known for coffees with rich body, earthy complexity, and chocolate-forward character.",
@@ -168,13 +168,13 @@ export const COFFEES: Coffee[] = [
     bestFor: ["Commercial Blends", "Espresso", "Instant Coffee"],
   },
   {
-    id: "lekempti",
-    name: "Ethiopian Lekempti",
+    id: "nekemte",
+    name: "Ethiopian Nekemte",
     price: 16.0,
     description:
-      "Lekempti coffees are vibrant and distinctive, offering fruity sweetness balanced by bold cocoa notes, increasingly popular among specialty roasters.",
+      "Nekemte coffees are vibrant and distinctive, offering fruity sweetness balanced by bold cocoa notes, increasingly popular among specialty roasters.",
     story:
-      "Grown in the East Wollega Zone of western Ethiopia, Lekempti coffee is farmed by smallholders in a region historically less known than Ethiopia's southern origins, but increasingly recognized for its expressive, fruit-forward cup.",
+      "Grown in the East Wollega Zone of western Ethiopia, Nekemte coffee is farmed by smallholders in a region historically less known than Ethiopia's southern origins, but increasingly recognized for its expressive, fruit-forward cup.",
     tastingExperience:
       "A vibrant, fruity cup with bold berry and winey character, balanced by dark chocolate depth and a full, expressive finish.",
     type: "Medium Roast",

@@ -68,11 +68,11 @@ export default function ProductDetail({ slug }: ProductDetailProps) {
                 {coffee.name}
               </h1>
 
-              <div className="mt-3 sm:mt-4 flex items-center gap-2 sm:gap-3">
+              {/* <div className="mt-3 sm:mt-4 flex items-center gap-2 sm:gap-3">
                 <span className="text-xl sm:text-2xl font-bold text-amber-700">
                   ${coffee.price.toFixed(2)}
                 </span>
-              </div>
+              </div> */}
 
               {/* Short description */}
               <p className="mt-4 sm:mt-6 text-xs sm:text-sm leading-relaxed text-stone-600 italic border-l-2 border-amber-300 pl-4">

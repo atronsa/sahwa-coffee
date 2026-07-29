@@ -38,9 +38,9 @@ export default function CoffeeCard({ coffee }: { coffee: Coffee }) {
             <h3 className="text-base sm:text-lg font-bold leading-snug text-stone-900">
               {coffee.name}
             </h3>
-            <span className="shrink-0 text-sm sm:text-base font-bold text-amber-700">
+            {/* <span className="shrink-0 text-sm sm:text-base font-bold text-amber-700">
               ${coffee.price.toFixed(2)}
-            </span>
+            </span> */}
           </div>
 
           <p className="mt-1 flex-1 text-[12px] sm:text-xs leading-relaxed text-black line-clamp-2 sm:line-clamp-3">

@@ -44,11 +44,11 @@ export default function FeaturedCoffee({ coffee }: { coffee: Coffee }) {
           {coffee.name}
         </h2>
 
-        <div className="mt-3 sm:mt-4 flex items-center gap-2 sm:gap-3">
+        {/* <div className="mt-3 sm:mt-4 flex items-center gap-2 sm:gap-3">
           <span className="text-2xl sm:text-3xl font-bold text-amber-700">
             ${coffee.price.toFixed(2)}
           </span>
-        </div>
+        </div> */}
 
         <p className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed text-black">
           {coffee.description}

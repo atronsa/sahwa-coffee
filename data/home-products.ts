@@ -16,7 +16,7 @@ export const HOME_PRODUCTS: HomeProduct[] = [
       "Hand-sorted, sun-dried beans from Ethiopian highlands shipped in hermetic bags to preserve every note.",
     cta: "Request Green Beans",
     href: "/inquiry-request",
-    image: "/images/product.webp",
+    image: "/images/product-unroasted.webp",
     theme: "dark",
   },
   {

@@ -11,7 +11,7 @@ export default function MissionStatement() {
             <span className="h-px w-4 sm:w-6 bg-amber-400/60" />
           </div>
 
-          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-6 sm:leading-7 text-stone-900 mx-auto">
+          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold leading-relaxed text-stone-900 mx-auto">
             To honor Ethiopia's coffee legacy by connecting smallholder farmers
             directly with the world —{" "}
             <span className="text-amber-700">
