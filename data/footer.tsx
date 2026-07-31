@@ -25,6 +25,7 @@ export const PRODUCT_LINKS: Footer[] = [
   { label: "Guji", href: "/products/guji" },
   { label: "Limu", href: "/products/limu" },
   { label: "Harrar", href: "/products/harrar" },
+  { label: "Nekemte", href: "/products/nekemte" },
 ] as const;
 
 export const CONTACT_INFO: ContactInfoItem[] = [
@@ -34,6 +35,8 @@ export const CONTACT_INFO: ContactInfoItem[] = [
     href: "https://maps.app.goo.gl/HnAJaYrwjsWeJFnx9?g_st=ic",
   },
   { icon: "phone", label: "+251-940-404-422", href: "tel:+251940404422" },
+  { icon: "phone", label: "+251-929-244-144", href: "tel:+251929244144" },
+
   {
     icon: "mail",
     label: "hello@sahwacoffee.com",
