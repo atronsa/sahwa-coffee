@@ -21,7 +21,7 @@ export const HOME_PRODUCTS: HomeProduct[] = [
   },
   {
     label: "Roasted",
-    title: "Roasted Bean.",
+    title: "Roasted Beans.",
     description:
       "Light, medium, or dark roasted to order, cupped for quality, available in bulk or branded retail packs.",
     cta: "Request Roasted Beans",
