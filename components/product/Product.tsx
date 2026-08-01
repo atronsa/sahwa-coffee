@@ -16,12 +16,12 @@ export default function Product() {
               The Coffee Bar
             </h1>
             <p className="mx-auto mt-3 sm:mt-4 md:mt-6 text-[13px] sm:text-sm leading-6 sm:leading-7 text-black md:mx-0">
-              Our collection celebrates the birthplace of coffee Ethiopia. Each
-              roast is sourced directly from smallholder farmers and
+              Our collection celebrates the birthplace of coffee, Ethiopia. Each
+              raw lot is sourced directly from smallholder farmers and
               cooperatives across the country's most renowned growing regions.
-              We visit every farm, cup every lot, and roast in small batches to
-              honor the distinct character of each origin. Discover the lineup
-              and find the roast that speaks to your palate.
+              We visit every farm, cup every lot, and process in small batches
+              to honor the distinct character of each origin. Discover the
+              lineup and find the green coffee that speaks to your palate.
             </p>
           </header>
 
@@ -41,11 +41,11 @@ export default function Product() {
                 The Full Lineup
               </h2>
               <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-black">
-                Find your perfect roast
+                Find your perfect coffee
               </p>
             </div>
             <span className="rounded-full border border-amber-100 bg-white/50 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-black backdrop-blur-sm">
-              {COFFEES.length} roasts available
+              {COFFEES.length} origin coffee available
             </span>
           </div>
 

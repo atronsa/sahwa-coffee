@@ -28,14 +28,14 @@ export default function FeaturedCoffee({ coffee }: { coffee: Coffee }) {
             </div>
           )}
         </div>
-        <RoastStamp type={coffee.type} />
+        {/* <RoastStamp type={coffee.type} /> */}
       </div>
 
       <div>
         <div className="mb-3 sm:mb-4 inline-flex items-center gap-2">
           <span className="h-px w-4 sm:w-6 bg-amber-400/60" />
           <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-amber-700">
-            Featured Roast
+            Featured Coffee
           </span>
           <span className="h-px w-4 sm:w-6 bg-amber-400/60" />
         </div>
@@ -55,13 +55,13 @@ export default function FeaturedCoffee({ coffee }: { coffee: Coffee }) {
         </p>
 
         <div className="mt-4 sm:mt-6 grid grid-cols-2 gap-2 sm:gap-3">
-          <div className="flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs text-black">
+          {/* <div className="flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs text-black">
             <Timer
               size={12}
               className="sm:w-3.5 sm:h-3.5 shrink-0 text-amber-600"
             />
             Roasted within 48hrs
-          </div>
+          </div> */}
           <div className="flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs text-black">
             <Award
               size={12}
@@ -72,9 +72,9 @@ export default function FeaturedCoffee({ coffee }: { coffee: Coffee }) {
         </div>
 
         <div className="mt-4 sm:mt-6 flex flex-wrap items-center gap-2 sm:gap-3">
-          <span className="rounded-full bg-stone-800 px-3 sm:px-5 py-1.5 sm:py-2 text-[11px] sm:text-[12px] font-medium uppercase tracking-widest text-cream">
+          {/* <span className="rounded-full bg-stone-800 px-3 sm:px-5 py-1.5 sm:py-2 text-[11px] sm:text-[12px] font-medium uppercase tracking-widest text-cream">
             {coffee.type}
-          </span>
+          </span> */}
           <span className="text-[11px] sm:text-xs text-black">
             {coffee.origin}
           </span>

@@ -30,7 +30,7 @@ export default function CoffeeCard({ coffee }: { coffee: Coffee }) {
             </div>
           )}
           <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-          <RoastStamp type={coffee.type} />
+          {/* <RoastStamp type={coffee.type} /> */}
         </div>
 
         <div className="flex flex-1 flex-col p-4 sm:p-5 lg:p-6">
@@ -48,9 +48,9 @@ export default function CoffeeCard({ coffee }: { coffee: Coffee }) {
           </p>
 
           <div className="mt-3 sm:mt-4 flex items-center justify-between">
-            <span className="rounded-full border border-gray-300 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-[11px] font-medium text-black transition-colors group-hover:border-amber-200 group-hover:text-amber-700">
+            {/* <span className="rounded-full border border-gray-300 px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-[11px] font-medium text-black transition-colors group-hover:border-amber-200 group-hover:text-amber-700">
               {coffee.type}
-            </span>
+            </span> */}
             <span className="flex items-center gap-1 text-[11px] sm:text-xs text-black">
               <Leaf size={9} className="sm:w-2.5 sm:h-2.5" />
               {coffee.origin}

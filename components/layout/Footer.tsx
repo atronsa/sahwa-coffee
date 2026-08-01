@@ -231,7 +231,7 @@ export default function Footer() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8">
-          <div className="grid grid-cols-3 gap-0 sm:gap-4 md:gap-6">
+          <div className="grid grid-cols-3 gap-0 sm:gap-2 md:gap-1">
             <LinkList title="Company" links={COMPANY_LINKS} />
             <LinkList title="Products" links={PRODUCT_LINKS} />
 

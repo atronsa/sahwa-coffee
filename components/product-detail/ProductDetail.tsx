@@ -50,19 +50,19 @@ export default function ProductDetail({ slug }: ProductDetailProps) {
                   priority
                 />
               </div>
-              <span className="absolute right-3 top-3 -rotate-3 rounded-full border-2 border-dashed border-amber-800/40 bg-cream/95 px-3 py-1 text-[9px] font-semibold uppercase tracking-widest text-amber-900 shadow-sm">
+              {/* <span className="absolute right-3 top-3 -rotate-3 rounded-full border-2 border-dashed border-amber-800/40 bg-cream/95 px-3 py-1 text-[9px] font-semibold uppercase tracking-widest text-amber-900 shadow-sm">
                 {coffee.type}
-              </span>
+              </span> */}
             </div>
 
             {/* Details */}
             <div>
               {/* Type badge */}
-              <div className="mb-3 sm:mb-4">
+              {/* <div className="mb-3 sm:mb-4">
                 <span className="inline-block rounded-full bg-stone-900 px-4 py-1.5 text-[9px] sm:text-[10px] font-medium uppercase tracking-widest text-cream">
                   {coffee.type}
                 </span>
-              </div>
+              </div> */}
 
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-stone-900">
                 {coffee.name}
