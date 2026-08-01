@@ -145,8 +145,8 @@ export const COFFEES: Coffee[] = [
     bestFor: ["Espresso", "Moka Pot", "Cold Brew"],
   },
   {
-    id: "jimma",
-    name: "Ethiopian Jimma",
+    id: "djimmah",
+    name: "Ethiopian Djimmah",
     price: 15.5,
     description:
       "Djimmah is one of Ethiopia's largest coffee-producing regions, known for coffees with rich body, earthy complexity, and chocolate-forward character.",
@@ -168,8 +168,8 @@ export const COFFEES: Coffee[] = [
     bestFor: ["Commercial Blends", "Espresso", "Instant Coffee"],
   },
   {
-    id: "nekemte",
-    name: "Ethiopian Nekemte",
+    id: "lekemptu",
+    name: "Ethiopian Lekemptu",
     price: 16.0,
     description:
       "Nekemte coffees are vibrant and distinctive, offering fruity sweetness balanced by bold cocoa notes, increasingly popular among specialty roasters.",
@@ -180,7 +180,7 @@ export const COFFEES: Coffee[] = [
     type: "Medium Roast",
     origin: "Ethiopia",
     region: "East Wollega, Oromia",
-    image: "/images/products/2.webp",
+    image: "/images/products/6.webp",
     altitude: "1,500 - 2,100 masl",
     process: "Natural and Washed",
     varietal: "Heirloom Ethiopian",

@@ -25,7 +25,8 @@ export const PRODUCT_LINKS: Footer[] = [
   { label: "Guji", href: "/products/guji" },
   { label: "Limu", href: "/products/limu" },
   { label: "Harrar", href: "/products/harrar" },
-  { label: "Nekemte", href: "/products/nekemte" },
+  { label: "Lekemptu", href: "/products/lekemptu" },
+  { label: "Djimmah", href: "/products/djimmah" },
 ] as const;
 
 export const CONTACT_INFO: ContactInfoItem[] = [
@@ -39,8 +40,8 @@ export const CONTACT_INFO: ContactInfoItem[] = [
 
   {
     icon: "mail",
-    label: "hello@sahwacoffee.com",
-    href: "mailto:hello@sahwacoffee.com",
+    label: "sahwacoffee00@gmail.com",
+    href: "mailto:sahwacoffee00@gmail.com",
   },
 ];
 
